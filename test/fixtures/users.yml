@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  userid: MyString
+  password: MyString
+  picture_count: 1
+  comment_count: 1
+  tag_count: 1
+
+two:
+  userid: MyString
+  password: MyString
+  picture_count: 1
+  comment_count: 1
+  tag_count: 1

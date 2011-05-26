@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>Pickr</title>
+  <script type="text/javascript" src="/javascripts/jigu-lastest.min.js"></script>
+  <link hrel="stylesheet" href="" />
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <header>
+    <h1>Pickr</h1>
+    <ul>
+      <li>Sign in</li>
+      <li>Sign up</li>
+    </ul>
+  </header>
 
-<%= yield %>
+  <div>
+
+  </div>
+  
+  <%= yield %>
 
 </body>
 </html>

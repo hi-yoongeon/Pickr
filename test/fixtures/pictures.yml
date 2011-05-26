@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  path: MyString
+  hash: MyString
+  filename: MyString
+  filesize: 
+  content_type: MyString
+  url: MyString
+  is_cached: false
+  is_thumbnail: false
+  like_count: 1
+  dislike_count: 1
+  tag_count: 1
+  comment_count: 1
+  additional_info: MyText
+
+two:
+  user_id: 1
+  path: MyString
+  hash: MyString
+  filename: MyString
+  filesize: 
+  content_type: MyString
+  url: MyString
+  is_cached: false
+  is_thumbnail: false
+  like_count: 1
+  dislike_count: 1
+  tag_count: 1
+  comment_count: 1
+  additional_info: MyText
