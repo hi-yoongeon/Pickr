@@ -1,0 +1,20 @@
+{
+    "name" : "Pickr",
+    "descriptions" : "소셜이미지 북마킹 서비스",
+    "version" : "1.0",
+    "permissions" : [
+	"http://pickr.ygmaster.net/*"
+    ],
+    "content_scripts" : [
+	{
+	    "matches" : ["http://*/*"],
+	    "js" : ["pickr.js"],
+	    "run_at" : "document_end"
+	}
+    ],
+    "browser_action" : {
+	"default_icon" : "pickr_icon.png",
+	"default_title" : "Pickr Option",
+	"popup" : "popup.html"
+    }
+}
