@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6{ margin: 0px; padding: 0px; font-size: 15px; }
 p, ul{ margin: 0px; padding: 0px; }
 body{ font-family: tahoma, daum; margin: 0px; color: #333; /*background: -webkit-gradient(linear, left top, left bottom, from(#55aaee), to(#003366));*/  }
 
-header{ z-index: 10; position: fixed; width: 100%; left: 0px; top: 0px; background-color: #003366; color: #fff; text-align: center; }
+header{ z-index: 10; position: fixed; width: 100%; left: 0px; top: 0px; background: -webkit-gradient(linear, left top, left bottom, from(#003366), to(#021231)); color: #fff; text-align: center; }
 header div{ border: 1px solid #036; }
 
 h1{ float: left; font-size: 1.3em; font-family: tahoma; padding: 5px 10px; }
@@ -16,6 +16,7 @@ footer{ z-index: 10; position: fixed; top: 100%; left: 0px; width: 100%; text-al
 footer div{ text-align : left; }
 
 body.layout_780{ background-image: url('/images/bg.gif'); background-position: center; background-repeat: repeat-y; }
+body.layout2{ background-image: url('/images/bg2.gif'); }
 header .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
 footer .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
 
@@ -46,9 +47,9 @@ footer .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
 #search_form .search_text_field input{ width: 300px; height: 32px; border: 3px solid #3a3d67; font-size: 1.5em; }
 #search_form .search_text_field button{ position: absolute; margin-left: -6px; margin-top: 0px; background-color: #3a3d67; border: 0px; font-size: 1.4em; height: 40px; width: 80px; color: #ddd; font-weight: bold; }
 
-#search_result{ margin: 50px 0px 0px 0px;  }
+#search_result{ margin: 50px 0px 0px 0px; }
 #search_result h4{ margin: 8px 10px; font-size: 0.8em; background: url('/images/bullet_1.png') 0% 30% no-repeat; padding-left: 10px;  }
-#search_result ul{ border-top: 1px solid #dadada; margin: 0px; padding : 0px; }
+#search_result ul{ border-top: 1px solid #dadada; margin: 0px 1px; padding : 0px; }
 #search_result ul li{ border-bottom: 1px solid #dadada; background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1)); list-style: none; margin: 0px; padding: 0px; }
 
 #search_result h4 .keyword{ color: #0048a9; }
