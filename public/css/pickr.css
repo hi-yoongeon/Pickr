@@ -1,11 +1,11 @@
 h1, h2, h3, h4, h5, h6{ margin: 0px; padding: 0px; font-size: 15px; }
 p, ul{ margin: 0px; padding: 0px; }
-body{ font-family: tahoma, daum; margin: 0px; color: #333; /*background: -webkit-gradient(linear, left top, left bottom, from(#55aaee), to(#003366));*/  }
+body{ padding: 0px; font-family: tahoma, daum; margin: 0px; color: #333; /*background: -webkit-gradient(linear, left top, left bottom, from(#55aaee), to(#003366));*/  }
 
-header{ z-index: 10; position: fixed; width: 100%; left: 0px; top: 0px; background: -webkit-gradient(linear, left top, left bottom, from(#003366), to(#021231)); color: #fff; text-align: center; }
-header div{ border: 1px solid #036; }
+header{ z-index: 10; position: fixed; width: 100%; left: 0px; top: 0px; background: -webkit-gradient(linear, left top, left bottom, from(#003366), to(#021231)); color: #fff; text-align: center; height: 35px; overflow: hidden; }
 
-h1{ float: left; font-size: 1.3em; font-family: tahoma; padding: 5px 10px; }
+
+header h1{ position: absolute; top: 5px; left: 5px; float: left; font-size: 1.3em; font-family: tahoma;  }
 
 header ul{ text-align: right; margin: 10px; font-size: 0.7em; }
 header ul li{ display: inline; margin: 0px 5px; }
@@ -50,7 +50,7 @@ footer .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
 #search_result{ margin: 50px 0px 0px 0px; }
 #search_result h4{ margin: 8px 10px; font-size: 0.8em; background: url('/images/bullet_1.png') 0% 30% no-repeat; padding-left: 10px;  }
 #search_result ul{ border-top: 1px solid #dadada; margin: 0px 1px; padding : 0px; }
-#search_result ul li{ border-bottom: 1px solid #dadada; background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1)); list-style: none; margin: 0px; padding: 0px; }
+#search_result ul li{ border-bottom: 1px solid #dadada; background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1)); list-style: none; margin: 0px; padding: 0px; height: 103px; overflow: hidden; }
 
 #search_result h4 .keyword{ color: #0048a9; }
 #search_result h4 .count{ color: #ff9000; }
