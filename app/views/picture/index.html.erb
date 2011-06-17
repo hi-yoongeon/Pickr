@@ -1,10 +1,80 @@
-<div>
-  <%=@picture_id%>
+<!--  <%=@picture_id%> -->
+
+<div id="picture_view">
+
+
+  <section class="sidebar">
+    <!-- 사진 상세정보 -->
+    <div class="item">
+      <h3>사진 상세정보</h3>
+      <table>
+	<tr>
+	  <th>최초 북마크</th>
+	  <td>6시간전</td>
+	</tr>
+	<tr>
+	  <th>최근 북마크</th>
+	  <td>3달전</td>
+	</tr>
+      </table>
+    </div>
+
+    <!-- 태그 클라우드 -->
+    <div class="item tag_cloud">
+      <h3>태그</h3>
+      <div>
+	<ul>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	  <li>초코파이</li>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="main">
+    <div class="photo_area">
+      <h3><span class="userid">ygmaster</span>님 외 <a href="#">5명</a>이 북마크했습니다.</h3>
+      <p style="text-align: center;">
+	<img src="/images/big_picture_sample.jpg" alt="샘플이미지" />
+      </p>
+
+      <div class="buttons" style="text-align: center;">
+	<button class="bookmark_off" alt="북마크"><span>5</span></button>
+	<button class="good"><span>235</span></button>
+	<button class="bad"><span>51</span></button>
+      </div>
+    </div>
+
+    <div class="reply_area">
+      <h3>댓글 <button>댓글쓰기</botton> </h3>
+
+      <ul>
+	<% for i in 1..5 %>
+	<li>
+	  <p class="profile_thumb"><img src="/images/mystery-man.jpg" /></p>
+	  <dl>
+	    <dt><span class="userid">ygmaster</span> <span class="small">(3시간전)</span></dt>
+	    <dd>금강산도 식후경입니다.</dd>
+	  </dl>
+	</li>
+	<% end %>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+
 </div>
 
-
-
-<div style="background-color: #000; display: table-cell; width: 100px;">asdfsf</div>
-<div style="background-color: #000; display: table-cell; width: 100px;">asdfsf</div>
-<div style="background-color: #000; display: table-cell; width: 100px;">asdfsf</div>
-<div style="background-color: #000; display: table-cell; width: 100px;">dfgdfgdflgjdlfkgjldkfjgasdsfsdfsadfsdfsfsdfsf</div>
+ 

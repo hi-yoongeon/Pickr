@@ -9,22 +9,23 @@
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
   </head>
-  <body class="<% if @layout_width > 0 %>layout_780<% end %><% if
-    @controller.params['controller'] == 'picture' %> layout2<% end %>">
-    <header>
+  <body class="<% if @layout_width > 0 %>layout_780<% end %><% if @controller_name == 'picture' %> layout2<% end %>">
+    <header id="site_header">
       <div <% if @layout_width > 0 %>class="layout_780"<% end %>>
-	<h1>Pickr</h1>
-	<ul>
-	  <li><a href="#">로그인</a></li>
-	  <li><a href="#">회원가입</a></li>
-	</ul>
+	<h1><a href="/">Pickr</a></h1>
+	<nav id="site_nav">
+	  <ul>
+	    <li><a href="#">로그인</a></li>
+	    <li><a href="#">회원가입</a></li>
+	  </ul>
+	</nav>
       </div>
     </header>
-    <div id="content_wrap">
-      <div <% if @layout_width > 0 %>class="layout_780"<% end %> >
+    <section id="content_wrap">
+      <div <% if @layout_width > 0 %>class="layout_780"<% end %> style="height: 100%;">
 	<%=yield%>
       </div>
-    </div>
+    </section>
     <footer>
       <div <% if @layout_width > 0 %>class="layout_780"<% end %>>Copyright (c) 2011, Pickr. All rights reserved.</div>
     </footer>

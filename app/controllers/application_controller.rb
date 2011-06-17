@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   def init
     @layout_width = LAYOUT_WIDTH_FULL
+    @controller_name = self.controller_name
   end
 
   def check_user_agent
