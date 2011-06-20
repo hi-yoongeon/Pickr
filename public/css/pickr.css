@@ -50,7 +50,7 @@ footer .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
 
 #content_wrap{ height: 100%; position: relative; text-align: center; top: 0px; }
 #content_wrap .main_content{ position: absolute; top: 50%; margin-top: -240px; height: 230px; width: 100% }
-#content_wrap .search_content{ padding-top: 30px; }
+#search_content{ padding-top: 40px; margin: 35px 0 0 0; }
 #content_wrap .layout_780{ width: 780px; margin: 0px auto; text-align: left; }
 
 
@@ -94,7 +94,7 @@ button.bad span{ display: inline-block; font-weight: bold; font-size: 1.3em; mar
 
 
 /* Picture 상세 */
-
+#picture_view{ margin: 35px 0 0 0; padding: 0 0 20px 0; }
 #picture_view section.sidebar{ float: right; width: 300px; }
 #picture_view section.sidebar div.item{ padding: 0 10px; }
 #picture_view section.sidebar h3{ padding: 10px 0 5px 5px; border-bottom: 1px solid #eee; }
