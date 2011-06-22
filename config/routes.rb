@@ -1,9 +1,5 @@
 Pickr::Application.routes.draw do
 
-  get "album/index"
-
-  get "picture/index"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -65,5 +61,7 @@ Pickr::Application.routes.draw do
   get "/callback" => "Test#test2"
   get "/picture/:id" => "picture#index"
   get "/notsupported" => "main#browser_not_supported"
+  post "/user/login" => "user#login"
+  get "/user/logout" => "user#logout"
   get "/:userid" => "album#index"
 end

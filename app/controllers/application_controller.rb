@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  #protect_from_forgery
   before_filter :init 
   before_filter :check_user_agent, :except => :browser_not_supported
 
