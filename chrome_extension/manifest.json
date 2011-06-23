@@ -1,30 +1,24 @@
 {
-    "name" : "Pickr",
-    "descriptions" : "소셜이미지 북마킹 서비스",
-    "version" : "0.0.2",
-    "background_page" : "background.html",
-    "icons" : {
-    	"19" : "pickr_chrome_icon.png",
-	"48" : "pickr_icon_48.png",
-	"128" : "pickr_icon_128.png"
-    },
-    "permissions" : [
-	"http://*/",
-	"tabs"
-    ],
-    "content_scripts" : [
-	{
-	    "matches" : ["http://*/*", "https://*/*"],
-	    "js" : [
-		"jigu-latest.min.js",
-		"contentscript.js"
-	    ],
-	    "run_at" : "document_end"
-	}
-    ],
-    "browser_action": {
-	"default_icon" : "pickr_icon_19.png",
-	"default_title" : "Pickr"
-    },
-    "options_page" : "pickr_option.html"
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "pickr_icon_19.png",
+      "default_title": "Pickr"
+   },
+   "content_scripts": [ {
+      "js": [ "jigu-latest.min.js", "contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "descriptions": "\uC18C\uC15C\uC774\uBBF8\uC9C0 \uBD81\uB9C8\uD0B9 \uC11C\uBE44\uC2A4",
+   "icons": {
+      "128": "pickr_icon_128.png",
+      "19": "pickr_chrome_icon.png",
+      "48": "pickr_icon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClGbSKcsdiCJLnwzNH/bS5CAzcriMBmsQ4V4UW//3DVeGVtSnQQZAwJvyATe9Qsyu1i3iHA9CfeAK9eEGETl+ohoSJCPcFfpVzzYFqfub8XAocLBICy/rVwQYbkjMgtejeu0HTamfuWU7Oi9ZE633bv1DTEQRybH5BNKduatga/wIDAQAB",
+   "name": "Pickr",
+   "options_page": "pickr_option.html",
+   "permissions": [ "http://*/", "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.0.2"
 }

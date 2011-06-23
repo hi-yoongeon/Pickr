@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf8" />
+    <title>Option - Pickr</title>
+  </head>
+  <body>
+    <h3>Pickr Option</h3>
+    <div>
+      <form id="login_form" onsubmit="return false">
+	<dl>
+	  <dt>userid</dt>
+	  <dd><input type="text" /></dd>
+	  <dt>password</dt>
+	  <dd><input type="password" /></dd>
+	</dl>
+	<p>
+	  <input type="submit" value="Sign-in" />
+	</p>
+      </form>      
+    </div>
+    <div>
+      <button onclick="chrome.extension.getBackgroundPage().pickr.auth.logout();">Logout</button>
+    </div>
+  </body>
+</html>
