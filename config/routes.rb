@@ -62,6 +62,11 @@ Pickr::Application.routes.draw do
   get "/picture/:id" => "picture#index"
   get "/notsupported" => "main#browser_not_supported"
   post "/user/login" => "user#login"
+  get "/user/login" => "user#loginView"
   get "/user/logout" => "user#logout"
+  get "/user/signup" => "user#signupView"
+  post "/user/signup" => "user#signup"
   get "/:userid" => "album#index"
+
+
 end
