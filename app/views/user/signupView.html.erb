@@ -1,16 +1,14 @@
 <div id="signup">
-
-  <form id="signup_form" name="signup" method="post" action="/user/signup">
-    <dl>
-      <dt>아이디</dt>
-      <dd><input type="text" name="data[User][userid]" /></dd>
-      <dt>비밀번호</dt>
-      <dd><input type="password" name="" /></dd>
-      <dt>비밀번호 확인</dt>
-      <dd><input type="password" name="" /></dd>
+  <h2>회원가입</h2>
+  <form id="signup_form" name="signup" method="post" action="/user/signup" onsubmit="return false;">
+    <ul>
+      <li><input type="text" name="data[User][userid]" placeholder="아이디" /></li>
+      <li><input type="password" name="data[User][password]" placeholder="비밀번호" /></li>
+      <li><input type="password" name="password_confirm" placeholder="비밀번호 확인" /></li>
     </dl>
-    <p><input type="submit" value="회원가입" /></p>
-  </form>
-  
+    <p><button type="submit">회원가입</button></p>
+  </form>  
 </div>
-<script type="text/javascript" src="/javascripts/user/signup.js"></script>
+<script type="text/javascript">
+  pickr.require(["service/user/signup"]).run();
+</script>
