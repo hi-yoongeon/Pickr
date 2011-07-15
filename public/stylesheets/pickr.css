@@ -1,0 +1,138 @@
+html, body{ height: 100%; }
+h1, h2, h3, h4, h5, h6{ margin: 0px; padding: 0px; font-size: 15px; }
+p, ul{ margin: 0px; padding: 0px; }
+body{ margin: 0px; padding: 0px; font-family: tahoma, daum; color: #333; /*background: -webkit-gradient(linear, left top, left bottom, from(#55aaee), to(#003366));*/  }
+
+
+
+/* Common css */
+.userid{ color: #3661dc; font-weight: bold; }
+.small{ font-size: 0.7em; color: #d9d9d9; }
+
+
+
+header#site_header{ z-index: 10; position: fixed; width: 100%; left: 0px; top: 0px; background: -webkit-gradient(linear, left top, left bottom, from(#003366), to(#021231)); color: #fff; text-align: center; height: 35px; overflow: hidden; }
+
+
+header#site_header h1{ position: absolute; top: 5px; margin-left: 0px; float: left; font-size: 1.3em; font-family: tahoma;  }
+header#site_header h1 a:hover{ text-decoration: none; }
+header#site_header a, header#site_header a:visited{ text-decoration: none; color: #fff; }
+header#site_header a:hover{ text-decoration: underline; color: #ffc21e; }
+
+nav#site_nav ul{ text-align: right; margin: 10px 0; font-size: 0.7em; }
+nav#site_nav ul li{ display: inline; margin: 0px 5px; }
+
+
+
+footer{ z-index: 10; position: fixed; top: 100%; left: 0px; width: 100%; text-align: left; padding: 5px; background-color: #fafafa; margin-top: -30px; height: 20px; font-size: 0.7em; border-top: 1px solid #dadada; font-family: verdana; color: #999; text-align: center; }
+footer div{ text-align : left; }
+
+body.layout_780{ background-image: url('/images/bg.gif'); background-position: center; background-repeat: repeat-y; }
+body.layout2{ background-image: url('/images/bg2.gif'); }
+header div{ padding: 0px 10px; }
+header .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
+footer .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
+
+
+
+#picture_stream{ position: relative; width: 100%; text-align: center; background-color: #CCC;  padding: 20px 0px; margin-top: 50px; min-width: 800px; }
+
+#picture_stream .arrow_left{ float: left; padding: 35px 10px 35px 20px; }
+#picture_stream .arrow_right{ float: right; padding: 35px 20px 35px 10px; }
+
+#picture_stream_mask{ margin: 0px 68px; width: 1px; overflow: hidden; }
+
+#picture_stream ul{ width: 10000px; text-align: left; height: 125px; }
+#picture_stream ul li{ list-style: none; display: inline; }
+
+
+.picking_image_counter{ margin-top: 30px; font-size: 1em; }
+
+#content_wrap{ height: 100%; position: relative; text-align: center; top: 0px; }
+#content_wrap .main_content{ position: absolute; top: 50%; margin-top: -240px; height: 230px; width: 100% }
+#search_content{ padding-top: 40px; margin: 35px 0 0 0; }
+#content_wrap .layout_780{ width: 780px; margin: 0px auto; text-align: left; }
+
+
+#search_form{ width: 580px; margin: 0px auto; text-align: left; }
+#search_form h2{ margin-right: 20px; margin-top: 3px; font-size: 2em; font-family: tahoma, Daum; float: left; }
+#search_form .search_text_field{ margin: 0px; padding-top: 5px; }
+#search_form .search_text_field input{ width: 300px; height: 32px; border: 3px solid #3a3d67; font-size: 1.5em; }
+#search_form .search_text_field button{ position: absolute; margin-left: -6px; margin-top: 0px; background-color: #3a3d67; border: 0px; font-size: 1.4em; height: 40px; width: 80px; color: #ddd; font-weight: bold; }
+
+#search_result{ margin: 50px 0px 0px 0px; }
+#search_result h4{ margin: 8px 10px; font-size: 0.8em; background: url('/images/bullet_1.png') 0% 30% no-repeat; padding-left: 10px;  }
+#search_result ul{ border-top: 1px solid #dadada; margin: 0px 1px; padding : 0px; }
+#search_result ul li{ border-bottom: 1px solid #dadada; background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1)); list-style: none; margin: 0px; padding: 0px; height: 103px; overflow: hidden; }
+
+#search_result h4 .keyword{ color: #0048a9; }
+#search_result h4 .count{ color: #ff9000; }
+
+
+button.bookmark{ margin: 0 auto; border: 1px solid #eaeaea; background: url('/images/bookmark_on.png') #fff 50% 20% no-repeat; width: 60px; height: 60px; border-radius: 10px; cursor: pointer; }
+button.bookmark:hover{ background-color: #ffffcc; }
+button.bookmark span{ display: inline-block; font-weight: bold; font-size: 1.3em; margin-top: 22px; color: #ffa200;  }
+
+button.bookmark_off{ margin: 0 auto; border: 1px solid #eaeaea; background: url('/images/bookmark_off.png') #fff 50% 20% no-repeat; width: 60px; height: 60px; border-radius: 10px; cursor: pointer; }
+button.bookmark_off:hover{ background-color: #ffffcc; }
+button.bookmark_off span{ display: inline-block; font-weight: bold; font-size: 1.3em; margin-top: 22px; color: #a2a2a2;  }
+
+button.good{ margin: 0 auto; border: 1px solid #eaeaea; background: url('/images/thumb_up.png') #fff 50% 20% no-repeat; width: 60px; height: 60px; border-radius: 10px; cursor: pointer; }
+button.good:hover{ background-color: #ffffcc; }
+button.good span{ display: inline-block; font-weight: bold; font-size: 1.3em; margin-top: 22px; color: #0042ff;  }
+
+button.bad{ margin: 0 auto; border: 1px solid #eaeaea; background: url('/images/thumb_down.png') #fff 50% 20% no-repeat; width: 60px; height: 60px; border-radius: 10px; cursor: pointer; }
+button.bad:hover{ background-color: #ffffcc; }
+button.bad span{ display: inline-block; font-weight: bold; font-size: 1.3em; margin-top: 22px; color: #ff0048;  }
+
+#search_result ul li p{ float: left; margin: 10px; }
+#search_result ul li .buttons{ float: right; padding: 22px 10px; }
+#search_result ul li dl{ margin: 0px; margin-left: 125px; margin-right: 240px; padding: 20px 20px; }
+#search_result ul li dt{ color: #0048a9; margin-bottom: 10px; }
+#search_result ul li dd{ color: #949494; margin: 0px; font-size: 0.8em; }
+
+
+
+/* Picture 상세 */
+#picture_view{ margin: 35px 0 0 0; padding: 0 0 20px 0; }
+#picture_view section.sidebar{ float: right; width: 300px; }
+#picture_view section.sidebar div.item{ padding: 0 10px; }
+#picture_view section.sidebar h3{ padding: 10px 0 5px 5px; border-bottom: 1px solid #eee; }
+
+#picture_view .tag_cloud li{ list-style: none; display: inline; }
+
+#picture_view section.main{ margin-right: 300px; margin-left: 1px; }
+#picture_view section.main .photo_area{ background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1)); }
+#picture_view section.main .photo_area .buttons{ padding: 10px 0; }
+#picture_view section.main .photo_area h3{ margin: 0px 0 5px 20px; padding: 10px 0 0 0; font-weight: normal; }
+#picture_view section.main .reply_area{ margin: 20px 10px; }
+#picture_view section.main .reply_area h3{ border-bottom: 1px solid #eee; padding: 0 10px 5px 5px; margin-bottom: 10px; }
+#picture_view section.main .reply_area h3 button{ float: right; margin-top: -5px; margin-right: -5px; }
+#picture_view section.main .reply_area ul li{ list-style: none; min-height: 55px; }
+#picture_view section.main .reply_area ul li p.profile_thumb{ float: left; }
+#picture_view section.main .reply_area ul li dl{ margin: 0 0 0 55px; }
+#picture_view section.main .reply_area ul li dd, #picture_view section.main .reply_area ul li dt{ margin: 0; }
+#picture_view section.main .reply_area ul li dt{ font-weight: bold; }
+
+
+section#album_sidebar_left{ position: absolute; width: 300px; height: 100%; top: 0; background-color: #eaeaea; margin-bottom: 2000px; }
+section#album_sidebar_left button{ background: url('/images/white_arrow_left.gif') 50% 50% no-repeat #dbdbdb; width: 7px; padding: 0px; height: 100%; color:transparent; float: right; border: 0px; cursor: pointer; }
+section#album_sidebar_left button:hover{ background-color: #ccc; }
+section#album_sidebar_left nav{ margin-top: 35px; }
+
+section#album{ margin-left: 300px; text-align: left; height: 100%; overflow: hidden; }
+section#album header{ background: -webkit-gradient(linear, left top, right top, from(#133169), to(#2a529d)); color: #f0f0f0; height: 30px; overflow: hidden; padding-top: 35px; z-index: 10; }
+section#album header h3{ padding: 5px 0 0 10px; height: 30px; }
+section#album .information{ position: absolute; margin: 0;  width: 200px; height: 100%; background-color: #eaeaea; margin-top: -65px; z-index: -1; left: 100%; margin-left: -200px; }
+
+section#album ul.picture_list{ margin: 0 200px 0 0; height: 100%; overflow-y: auto; }
+section#album ul.picture_list li{ display: inline-block; margin: 10px;  }
+section#album ul.picture_list li img{ border-radius: 10px; box-shadow: 5px 5px 5px #ccc; }
+
+
+
+/* signup */
+#signup ul li { list-style: none; }
+
+
+
