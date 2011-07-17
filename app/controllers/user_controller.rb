@@ -8,6 +8,10 @@ class UserController < ApplicationController
   end
 
   def signup
+
+    puts params["data"]["User"]["userid"]
+
+    render :text => "hihiho"
   end
 
   def signupView
