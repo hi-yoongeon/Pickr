@@ -6,12 +6,16 @@ class User < ActiveRecord::Base
 
   attr_accessor :password
   before_save :encrypt_password
+  before_save :access_token
 
   validates :userid, :uniqueness => true
 
   def has_password?( submitted_password )
     encrypted_password == encrypt( submitted_password )
   end
+
+
+
 
   private
   def encrypt_password
@@ -29,6 +33,14 @@ class User < ActiveRecord::Base
 
   def secure_hash( string )
     Digest::SHA2.hexdigest( string )
+  end
+
+  def access_token()
+    self.access_token = make_access_token if new_record?
+  end
+
+  def make_access_token
+    secure_hash( "#{Time.now.utc}--#{self.userid}" )
   end
 
 end

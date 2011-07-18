@@ -14,7 +14,12 @@ function doSignin( formData ){
 
 
 function callback( res ){
-  alert(res);
+    var json = eval( "(" + res.responseText + ")" );
+    if( json.code == 200 ){
+	window.location.reload();
+    }else{
+	alert(json.message);
+    }
 }
 
 pickr.require("lib/FormData").run( function(){
@@ -26,7 +31,5 @@ pickr.require("lib/FormData").run( function(){
 										  formData.reload();
 										  doSignin( formData );
 										});
-
-
 
 				   } );
