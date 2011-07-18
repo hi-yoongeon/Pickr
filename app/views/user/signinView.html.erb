@@ -1,0 +1,17 @@
+<div id="signin">
+
+  <form onsubmit="return false;" id="signin_form" name="signin" method="post" action="/user/signin">
+    <dl>
+      <dt>아이디</dt>
+      <dd><input type="text" id="userid" name="user[userid]" /></dd>
+      <dt>비밀번호</dt>
+      <dd><input type="password" id="password" name="User[password]" /></dd>
+    </dl>
+    <p><button type="submit">로그인</button></p>
+  </form>
+  
+</div>
+
+<script type="text/javascript">
+pickr.require("service/user/signin").run();
+</script>

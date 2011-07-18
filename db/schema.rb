@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110526063446) do
+ActiveRecord::Schema.define(:version => 20110718033000) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -72,13 +72,16 @@ ActiveRecord::Schema.define(:version => 20110526063446) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "userid",                       :null => false
-    t.string   "password",                     :null => false
-    t.integer  "picture_count", :default => 0, :null => false
-    t.integer  "comment_count", :default => 0, :null => false
-    t.integer  "tag_count",     :default => 0, :null => false
+    t.string   "userid",                            :null => false
+    t.integer  "picture_count",      :default => 0, :null => false
+    t.integer  "comment_count",      :default => 0, :null => false
+    t.integer  "tag_count",          :default => 0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
+
+  add_index "users", ["userid"], :name => "index_users_on_userid", :unique => true
 
 end

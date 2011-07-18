@@ -1,7 +1,9 @@
 function FormData( id ) {
-    this._id = id;
-    this._element = $(id);
-    if( this._element == null ){ return undefined; }
+  this._id = id;
+  this._element = $(id);
+  if( this._element == null ){ return undefined; }
+  this.reload();
+  return true;
 }
 
 
@@ -30,7 +32,7 @@ FormData.prototype = {
     },
     getFormElement : function(){
 	return this._element;
-    },  
+    },
     getQueryString : function(){
 	var values = [];
 	for( key in this._formData ){
