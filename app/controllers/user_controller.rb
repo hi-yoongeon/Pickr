@@ -6,7 +6,6 @@ class UserController < ApplicationController
     result = {}
     user = User.find_by_userid data["userid"]
 
-
     if user.nil?
       result["code"] = 0
       result["message"] = "아이디가 올바르지 않습니다"
@@ -14,6 +13,7 @@ class UserController < ApplicationController
       if user.has_password? data["password"]
         result["code"] = 200
         result["data"] = user
+        self.current_user = user
       else
         result["code"] = 0
         result["message"] = "비밀번호가 올바르지 않습니다"
@@ -48,7 +48,8 @@ class UserController < ApplicationController
   end
 
   def signout
-
+    session[:current_user] = nil
+    redirect_to "/"
   end
 
 end
