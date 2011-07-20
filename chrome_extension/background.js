@@ -8,6 +8,14 @@ pickr._option = {
     IMAGE_MIN_HEIGHT : 200
 };
 
+
+
+
+pickr.user = {};
+pickr.picture = {};
+pickr.localStorage = {};
+
+
 pickr.picking = {
     getValue : function(){
 	return localStorage.getItem(pickr._option.PICKING_VALUE_FIELD_NAME) || "off";
@@ -17,9 +25,9 @@ pickr.picking = {
     },
     toggle : function(tab){
 	var picking = pickr.picking.getValue();
-	if( picking == "on" ) pickr.picking.set("off"); 
+	if( picking == "on" ) pickr.picking.set("off");
 	else pickr.picking.set("on");
-	chrome.tabs.sendRequest(tab.id, { 
+	chrome.tabs.sendRequest(tab.id, {
 	    "picking" : pickr.picking.getValue(),
 	    "img_width" : pickr._option.IMAGE_MIN_WIDTH,
 	    "img_height" : pickr._option.IMAGE_MIN_HEIGHT
@@ -69,12 +77,12 @@ pickr.auth = {
 	new daum.Ajax({
 	    "url" : pickr._option.URL + "/user/login",
 	    "method" : "POST",
-	    "onsuccess" : function(res){ 
+	    "onsuccess" : function(res){
 		_this.setAccessToken("token");
 		pickr.picking.setup();
 		callback(res);
 	    }
-	}).request(); 
+	}).request();
     },
     logout : function(){
 	new daum.Ajax({
