@@ -1,13 +1,46 @@
-var pickr = ( typeof pickr === "undefined" ) ? {} : pickr;
-pickr._option = {
-    URL : "http://localhost:3000",
-    ACCESS_TOKEN_FIELD_NAME : "accessToken",
-    PICKING_VALUE_FIELD_NAME : "picking",
-    LEAST_IMAGE_SIZE : {
-      WIDTH : 100,
-      HEIGHT : 100
+function pickingDisplayOn(){
+    chrome.browserAction.setBadgeText({text: "on"});
+    chrome.browserAction.setBadgeBackgroundColor({color: [0,0,255,200]});
+}
+
+function pickingDisplayOff(){
+    chrome.browserAction.setBadgeText({text: "off"});
+    chrome.browserAction.setBadgeBackgroundColor({color: [255,0,0,200]});
+}
+
+function pickingToggle(){
+    if( pickr.localStorage.getPickingOption() === "OFF" ){
+	pickingDisplayOn();
+	pickr.localStorage.setPickingOption("ON");
+    }else{
+	pickingDisplayOff();
+	pickr.localStorage.setPickingOption("OFF");
     }
-};
+}
+
+function setBrowserActionEventPicking(){
+    chrome.browserAction.onClicked.addListener(function(tab){
+	pickingToggle();	
+    });
+}
+
+function setBrowserActionEventSignin(){
+    console.log("signin popup");
+    chrome.browserAction.setPopup({
+	"popup" : "login.html"
+    });
+}
+
+
+(function(){
+
+    if( typeof pickr.localStorage.getAccessToken() !== "undefined" ){	
+	setBrowserActionEventPicking();
+    }else{
+	setBrowserActionEventSignin();
+    }
+})();
+
 
 
 chrome.extension.onRequest.addListener(function( request, sender, sendResponse ){
