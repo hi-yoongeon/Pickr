@@ -1,6 +1,6 @@
 class PictureController < ApplicationController
   def index
-    @picture_id = params[:id]
+    @picture = Picture.find params[:id] 
     @layout_width = LAYOUT_WIDTH_780
   end
 
@@ -9,11 +9,11 @@ class PictureController < ApplicationController
     hash = make_image_hash url;
     result = {};
 
-    pic =  Picture.find_by_hash( hash )
+    pic =  Picture.find_by_url_hashed( hash )
 
     if( pic == nil )
       pic = Picture.new
-      pic.hash = hash
+      pic.url_hashed = hash
       pic.url = url
       pic.save
       download_image_and_make_thumbnail url, hash
@@ -38,7 +38,7 @@ class PictureController < ApplicationController
     hash = make_image_hash url;
     result = {}
 
-    pic = Picture.find_by_hash hash
+    pic = Picture.find_by_url_hashed hash
 
     user_pic = UserPicture.where("user_id = ? AND picture_id = ?", current_user[:id], pic.id).first
 
@@ -55,7 +55,7 @@ class PictureController < ApplicationController
     hash = make_image_hash url;
     result = {}
 
-    pic = Picture.find_by_hash hash
+    pic = Picture.find_by_url_hashed hash
 
     if(pic.nil?)
       result["is_bookmark"] = false
@@ -63,7 +63,7 @@ class PictureController < ApplicationController
       user_pic = UserPicture.where("user_id = ? AND picture_id = ?", current_user[:id], pic.id).first
 
       if( user_pic.nil? )
-        result["is_bookmark"] = false        
+        result["is_bookmark"] = false
       else
         result["is_bookmark"] = true        
       end

@@ -36,7 +36,7 @@ function addEventShowPickingButton( image ){
 
 								     if( request.type === "is_bookmark_callback" ){
 								       var json = eval("(" + request.response.responseText + ")");
-								       pickingButton = createPickingButton( image, !json.is_bookmark );
+								       pickingButton = createPickingButton( image, json.is_bookmark );
 								       image.parentNode.insertBefore( pickingButton );
 								     }
 

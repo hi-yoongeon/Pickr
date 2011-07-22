@@ -63,7 +63,7 @@ chrome.extension.onRequest.addListener(function( request, sender, sendResponse )
 					 }else if( request.type === "is_bookmark" ){
 					   pickr.picture.isBookmarked( request.url, function(res){
 									 console.log("calle");
-									 console.log( sender );
+									 console.log( res );
 									 chrome.tabs.sendRequest( sender.tab.id ,{ type: "is_bookmark_callback", response : res });
 								       } );
 					 }

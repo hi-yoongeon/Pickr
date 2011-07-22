@@ -61,34 +61,9 @@
   </aside>
 
   <ul class="picture_list">
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
-    <li><a href="#"><img src="/images/album_icon_sample.jpg" alt="" /></a></li>
+    <% @userPictures.each do | up | %>
+    <li><a href="/picture/<%= up.picture.id %>"><img src="/pictures/small/<%= up.picture.url_hashed %>" alt="" /></a></li>
+    <% end %>
   </ul>
 
 </section>

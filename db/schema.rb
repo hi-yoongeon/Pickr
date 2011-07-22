@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110722054520) do
+ActiveRecord::Schema.define(:version => 20110722074416) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20110722054520) do
   end
 
   create_table "pictures", :force => true do |t|
-    t.string   "hash",                              :null => false
+    t.string   "url_hashed",                        :null => false
     t.string   "url",                               :null => false
     t.boolean  "is_thumbnail",   :default => false, :null => false
     t.integer  "bookmark_count", :default => 0,     :null => false

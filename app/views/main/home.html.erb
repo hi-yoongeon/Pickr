@@ -14,7 +14,7 @@
 	  <div id="picture_stream_mask">
 	    <ul id="picture_stream_ul">
 	      <% @all_images.each do | picture |  %>
-	      <li><img src="/pictures/medium/<%= picture.hash %>" alt="이미지" /></li>
+	      <li><img src="/pictures/medium/<%= picture.url_hashed %>" alt="이미지" /></li>
 	      <% end %>
 	    </ul>
 	  </div>
