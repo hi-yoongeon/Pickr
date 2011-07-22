@@ -15,6 +15,9 @@ pickr.localStorage.setAccessToken = function( accessToken ){
 pickr.localStorage.getPickingOption = function(){
     var setInitData = function(){ pickr.localStorage.setPickingOption( "OFF" );  };
     var value =  localStorage.getItem( pickr._option.PICKING_VALUE_FIELD_NAME ) || undefined ;
+
+  console.log( value );
+
     if( typeof value === "undefined" ){
 	setInitData();
 	value = arguments.callee();
@@ -24,4 +27,9 @@ pickr.localStorage.getPickingOption = function(){
 
 pickr.localStorage.setPickingOption = function( value ){
     localStorage.setItem( pickr._option.PICKING_VALUE_FIELD_NAME, value );
+};
+
+pickr.localStorage.clearAll = function(){
+  localStorage.removeItem( pickr._option.PICKING_VALUE_FIELD_NAME );
+  localStorage.removeItem( pickr._option.ACCESS_TOKEN_FIELD_NAME );
 };

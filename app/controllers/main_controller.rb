@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def home
-    
+    @all_images = Picture.all
   end
 
   def browser_not_supported

@@ -19,9 +19,13 @@ function pickingToggle(){
 }
 
 function setBrowserActionEventPicking(){
-    chrome.browserAction.onClicked.addListener(function(tab){
-	pickingToggle();	
-    });
+  pickingDisplayOff();
+  pickr.localStorage.setPickingOption("OFF");
+
+  chrome.browserAction.setPopup({ popup : "" });
+  chrome.browserAction.onClicked.addListener(function(tab){
+					       pickingToggle();
+					     });
 }
 
 function setBrowserActionEventSignin(){
@@ -31,17 +35,21 @@ function setBrowserActionEventSignin(){
     });
 }
 
+function signin( userid, password, win ){
+  pickr.auth.signin( userid, password, win );
+}
 
-(function(){
 
-    if( typeof pickr.localStorage.getAccessToken() !== "undefined" ){	
+function initBrowserAction(){
+    if( typeof pickr.localStorage.getAccessToken() !== "undefined" ){
 	setBrowserActionEventPicking();
     }else{
 	setBrowserActionEventSignin();
     }
-})();
+}
 
 
+initBrowserAction();
 
 chrome.extension.onRequest.addListener(function( request, sender, sendResponse ){
 					 if( request.type === "documentReady" ){
@@ -52,5 +60,11 @@ chrome.extension.onRequest.addListener(function( request, sender, sendResponse )
 					   chrome.tabs.sendRequest( sender.tab.id, data );
 					 }else if( request.type === "bookmark" ){
 					   pickr.picture.bookmark( request.url );
+					 }else if( request.type === "is_bookmark" ){
+					   pickr.picture.isBookmarked( request.url, function(res){
+									 console.log("calle");
+									 console.log( sender );
+									 chrome.tabs.sendRequest( sender.tab.id ,{ type: "is_bookmark_callback", response : res });
+								       } );
 					 }
 				       });

@@ -1,17 +1,21 @@
-var pickr = chrome.extension.getBackgroundPage().pickr;
+var background = chrome.extension.getBackgroundPage();
 
 window.addEventListener("load", function(){
 
-    document.getElementById("login_form").addEventListener("submit", function(){
-	var userid = "ygmaster";
-	var passwd = "djflejfl";
-	
-	pickr.auth.login(userid, passwd, function(res){
-	    window.close();
-	});
+			  document.getElementById("login_form").addEventListener("submit", function(){
+										   var userid = $("userid").value;
+										   var passwd = $("password").value;
 
-	return false;
-    });
+										   background.signin( userid, passwd, window );
 
-});
+
+
+//										   pickr.auth.login(userid, passwd, function(res){
+//												      window.close();
+//												    });
+
+										   return false;
+										 });
+
+			});
 

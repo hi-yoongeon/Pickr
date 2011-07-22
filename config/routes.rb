@@ -59,14 +59,19 @@ Pickr::Application.routes.draw do
 
   get "/search" => "search#result"
   get "/callback" => "Test#test2"
-  get "/picture/:id" => "picture#index"
   get "/notsupported" => "main#browser_not_supported"
   post "/user/signin" => "user#signin"
   get "/user/signin" => "user#signinView"
   get "/user/signout" => "user#signout"
   get "/user/signup" => "user#signupView"
   post "/user/signup" => "user#signup"
-  get "/:userid" => "album#index"
 
+  post "/picture/add" => "picture#add"
+  post "/picture/del" => "picture#del"
+  get "/picture/is_bookmark" => "picture#is_bookmark"
+
+  get "/pictures/:image_type/:hash" => "picture#download";
+  get "/picture/:id" => "picture#index"
+  get "/:userid" => "album#index"  
 
 end

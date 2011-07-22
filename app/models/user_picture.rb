@@ -1,4 +1,4 @@
-class Like < ActiveRecord::Base
+class UserPicture < ActiveRecord::Base
   belongs_to :picture 
   belongs_to :user
 end

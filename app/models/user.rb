@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :password
   before_save :encrypt_password
-  before_save :access_token
+  before_save :get_access_token
 
   validates :userid, :uniqueness => true
 
@@ -35,8 +35,9 @@ class User < ActiveRecord::Base
     Digest::SHA2.hexdigest( string )
   end
 
-  def access_token()
+  def get_access_token()
     self.access_token = make_access_token if new_record?
+    puts self.access_token;
   end
 
   def make_access_token

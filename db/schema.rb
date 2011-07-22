@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110718225048) do
+ActiveRecord::Schema.define(:version => 20110722054520) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -37,21 +37,14 @@ ActiveRecord::Schema.define(:version => 20110718225048) do
   end
 
   create_table "pictures", :force => true do |t|
-    t.integer  "user_id",                            :null => false
-    t.string   "path",                               :null => false
-    t.string   "hash",                               :null => false
-    t.string   "filename",                           :null => false
-    t.integer  "filesize",        :default => 0,     :null => false
-    t.string   "content_type",                       :null => false
-    t.string   "url",                                :null => false
-    t.boolean  "is_cached",       :default => false, :null => false
-    t.boolean  "is_thumbnail",    :default => false, :null => false
-    t.integer  "bookmark_count",  :default => 1,     :null => false
-    t.integer  "like_count",      :default => 0,     :null => false
-    t.integer  "dislike_count",   :default => 0,     :null => false
-    t.integer  "tag_count",       :default => 0,     :null => false
-    t.integer  "comment_count",   :default => 0,     :null => false
-    t.text     "additional_info"
+    t.string   "hash",                              :null => false
+    t.string   "url",                               :null => false
+    t.boolean  "is_thumbnail",   :default => false, :null => false
+    t.integer  "bookmark_count", :default => 0,     :null => false
+    t.integer  "like_count",     :default => 0,     :null => false
+    t.integer  "dislike_count",  :default => 0,     :null => false
+    t.integer  "tag_count",      :default => 0,     :null => false
+    t.integer  "comment_count",  :default => 0,     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -67,6 +60,13 @@ ActiveRecord::Schema.define(:version => 20110718225048) do
   create_table "tags", :force => true do |t|
     t.string   "tag",                       :null => false
     t.integer  "count",      :default => 0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_pictures", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.integer  "picture_id", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

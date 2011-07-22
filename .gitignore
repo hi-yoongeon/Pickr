@@ -1,6 +1,10 @@
 .bundle
 db/*.sqlite3
 log/*.log
+pictures/*
+pictures/small/*
+pictures/medium/*
+pictures/big/*
 *.log
 /tmp/
 doc/

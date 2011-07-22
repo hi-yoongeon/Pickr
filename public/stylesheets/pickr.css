@@ -40,7 +40,7 @@ footer .layout_780{ text-align: left; margin: 0px auto; width: 780px; }
 #picture_stream .arrow_left{ float: left; padding: 35px 10px 35px 20px; }
 #picture_stream .arrow_right{ float: right; padding: 35px 20px 35px 10px; }
 
-#picture_stream_mask{ margin: 0px 68px; width: 1px; overflow: hidden; }
+#picture_stream_mask{ margin: 0px 68px; width: 1000px; overflow: hidden; }
 
 #picture_stream ul{ width: 10000px; text-align: left; height: 125px; }
 #picture_stream ul li{ list-style: none; display: inline; }

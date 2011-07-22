@@ -10,7 +10,7 @@ class CreatePictures < ActiveRecord::Migration
       t.string :url, :null => false
       t.boolean :is_cached, :null => false, :default => 0
       t.boolean :is_thumbnail, :null => false, :default => 0
-      t.integer :bookmark_count, :null => false, :default => 1
+      t.integer :bookmark_count, :null => false, :default => 0
       t.integer :like_count, :null => false, :default => 0
       t.integer :dislike_count, :null => false, :default => 0
       t.integer :tag_count, :null => false, :default => 0

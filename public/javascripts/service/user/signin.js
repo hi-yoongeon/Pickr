@@ -16,7 +16,8 @@ function doSignin( formData ){
 function callback( res ){
     var json = eval( "(" + res.responseText + ")" );
     if( json.code == 200 ){
-	window.location.reload();
+      console.log( json );
+      //window.location.href = "/";
     }else{
 	alert(json.message);
     }

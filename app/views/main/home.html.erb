@@ -13,18 +13,9 @@
 
 	  <div id="picture_stream_mask">
 	    <ul id="picture_stream_ul">
-	      <li><img src="/images/sample_img1.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img2.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img3.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img4.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img5.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img6.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img7.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img8.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img9.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img10.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img11.jpg" alt="이미지" /></li>
-	      <li><img src="/images/sample_img12.jpg" alt="이미지" /></li>
+	      <% @all_images.each do | picture |  %>
+	      <li><img src="/pictures/medium/<%= picture.hash %>" alt="이미지" /></li>
+	      <% end %>
 	    </ul>
 	  </div>
 	</div>

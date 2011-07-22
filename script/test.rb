@@ -1,8 +1,9 @@
 require 'RMagick'
-require 'digest'
+
 
 url = ARGV[0]
-hash = Digest::SHA2.hexdigest( "#{Time.now.utc}--#{url}" )
-wget_command = "wget -O #{hash} " + url
+hash = ARGV[1]
+save_dir = ENV["OLDPWD"] + "/pictures/";
 
+wget_command = "wget -O #{save_dir + hash} #{url}";
 system( wget_command )

@@ -25,7 +25,7 @@ function endSignup( response ){
       alert( json.message );
     }else{
       alert("회원가입 완료");
-      window.location.reload();
+      window.location.href = "/";
     }
 
   }else{
