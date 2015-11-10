@@ -8,7 +8,7 @@ gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'rake', '~> 0.8.7'
 
-gem 'rmagick'
+gem 'rmagick', '2.15.4'
 
 # Use unicorn as the web server
 # gem 'unicorn'
